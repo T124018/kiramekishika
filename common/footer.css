@@ -1,0 +1,210 @@
+.site-footer {
+    background-color: #f5f1ed;
+    background-image: none;
+    color: #333;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.site-footer .day{
+    color: #D3C7AC;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.site-footer .schedule {
+    padding: 35px 40px;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 表 */
+.site-footer .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* 曜日 */
+.site-footer .schedule-table thead th {
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+/* 時間と各曜日のセル */
+.site-footer .schedule-table tbody th,
+.site-footer .schedule-table tbody td {
+    border-top: 1px solid #D3C7AC;
+    padding: 12px 5px;
+}
+
+/* 最終行の下線 */
+.site-footer .schedule-table tbody tr:last-child th,
+.site-footer .schedule-table tbody tr:last-child td {
+    border-bottom: 1px solid #D3C7AC;
+}
+
+/* 時間 */
+.site-footer .schedule-table tbody th {
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+/* 丸印 */
+.site-footer .circle {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #FF8A5B;
+    border-radius: 50%;
+}
+
+/* 斜線 */
+.site-footer .slash {
+    color: #765b49;
+    font-size: 18px;
+}
+
+/* 星 */
+.site-footer .star {
+    color: #FF8A5B;
+    font-size: 18px;
+}
+
+/* 注意書き */
+.site-footer .schedule-notes {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.site-footer .schedule-notes p {
+    margin: 0;
+}
+
+.site-footer .contact-links,
+.top .contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.site-footer .contact-links a,
+.top .contact-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(78, 57, 39, 0.18);
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.site-footer .contact-links .web,
+.top .contact-links .web {
+    background-color: #4D9380;
+    color: #fff;
+}
+
+.site-footer .contact-links .tel,
+.top .contact-links .tel {
+    background-color: #F09A2D;
+    color: #fff;
+}
+
+.site-footer .contact-links a:hover,
+.top .contact-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 rgba(78, 57, 39, 0.18);
+}
+
+.site-footer .contact-links .web:hover,
+.top .contact-links .web:hover {
+    background-color: #DDC694;
+}
+
+.site-footer .contact-links .tel:hover,
+.top .contact-links .tel:hover {
+    background-color: #DDC694;
+}
+
+.site-footer .contact-links a:focus-visible,
+.top .contact-links a:focus-visible {
+    outline: 3px solid #765b49;
+    outline-offset: 3px;
+}
+
+/* 地図コンテナ */
+.site-footer .map-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    text-align: center;
+    margin: 20px auto;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.site-footer .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+.site-footer .adress{
+    text-align: center;
+}
+
+.site-footer .footer-standards-link {
+    display: flex;
+    justify-content: center;
+    margin: 50px 16px 36px;
+}
+
+.site-footer .footer-standards-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    background-color: #B79C82;
+    box-shadow: 0 4px 0 rgba(64, 56, 45, 0.2);
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.site-footer .footer-standards-link a::after {
+    content: "→";
+}
+
+.site-footer .footer-standards-link a:hover {
+    transform: translateY(-3px);
+    background-color: #A87945;
+    box-shadow: 0 7px 0 rgba(64, 56, 45, 0.2);
+}
+
+.site-footer .footer-standards-link a:focus-visible {
+    outline: 3px solid #40382D;
+    outline-offset: 4px;
+}
+
+.site-footer .buttom{
+    background-color: #D3C7AC;
+    color: #FBF9F7;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+}
