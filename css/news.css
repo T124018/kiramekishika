@@ -1,0 +1,135 @@
+.news-list-page {
+    margin: 0;
+    color: #40382D;
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+}
+
+.notice.notice-preview {
+    margin: 0;
+    padding: clamp(48px, 7vw, 88px) 5%;
+    border: 0;
+    border-radius: 0;
+    background-color: #FFFCF6;
+    box-shadow: none;
+}
+
+.news-page {
+    min-height: 60vh;
+    box-sizing: border-box;
+    padding: clamp(56px, 8vw, 96px) 16px 72px;
+    background-color: #FFFCF6;
+}
+
+.news-inner {
+    width: min(100%, 760px);
+    margin: 0 auto;
+}
+
+.news-heading {
+    margin: 0 auto clamp(36px, 5vw, 60px);
+    text-align: center;
+}
+
+.news-eyebrow {
+    margin: 0 0 16px;
+    color: #B98A54;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+}
+
+.news-heading h1,
+.news-heading h2 {
+    margin: 0;
+    color: #40382D;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+}
+
+.news-items {
+    width: 100%;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 22px 10px;
+    border-bottom: 1px solid #E8E1D8;
+}
+
+.news-item time {
+    color: #B98A54;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.news-item a,
+.news-item span {
+    color: #40382D;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.7;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    color: #A87945;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.news-button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.news-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 0 32px;
+    border-radius: 999px;
+    background-color: #A95348;
+    box-shadow: 0 4px 0 rgba(64, 56, 45, 0.2);
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.news-button::after {
+    content: "→";
+}
+
+.news-button:hover {
+    transform: translateY(-3px);
+    background-color: #A87945;
+    box-shadow: 0 7px 0 rgba(64, 56, 45, 0.2);
+}
+
+.news-button:focus-visible {
+    outline: 3px solid #40382D;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .news-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 12px;
+        padding: 18px 4px;
+    }
+
+    .news-item time,
+    .news-item a,
+    .news-item span {
+        font-size: 0.9rem;
+    }
+
+    .news-button-wrap {
+        margin-top: 32px;
+    }
+}

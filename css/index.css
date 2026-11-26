@@ -1,0 +1,404 @@
+@charset "utf-8";
+
+body{
+    font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.top{
+   margin-bottom: 0%;
+   position: static;
+   z-index: 10;
+}
+
+header{
+    position: relative;
+    min-height: 100%;
+}
+
+.catchcopy {
+    position: relative;
+    width: 90%;
+    margin: clamp(160px, 20vh, 320px) auto 0;
+    color: #DDB563;
+    text-align: center;
+    font-size: 2.5vw;
+    font-family: "Yomogi", cursive;
+    font-weight: bold;
+    text-shadow:
+        #ffffff 2px 2px 4px,
+        #ffffff 4px 4px 10px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0);
+}
+
+.image {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: clamp(48px, 10vw, 120px) 24px 24px 24px;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transform: translateX(-3%) scale(1.1);
+}
+
+
+.fhone a{
+    color: #F8B62D;
+}
+@media (min-width: 1100px) {
+    a[href*="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    }
+    }
+.logo{
+    margin-top: 0%;
+}
+header .top{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.top .contact-links{
+    justify-content: flex-start;
+    margin: 12px 0 0 3%;
+}
+
+@media (max-width: 1100px){
+    .top .contact-links.header-contact-links{
+        position: fixed;
+        top: 22px;
+        right: 86px;
+        z-index: 40;
+        flex-wrap: nowrap;
+        gap: 4px;
+        margin: 0;
+    }
+
+    .top .contact-links.header-contact-links a{
+        min-height: 40px;
+        padding: 0 clamp(4px, 1.8vw, 8px);
+        font-size: clamp(10px, 3vw, 12px);
+    }
+}
+
+@media (min-width: 1100px){
+    .top .contact-links.header-contact-links{
+        position: fixed;
+        top: 5vh;
+        left: 3%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin: 0;
+        transform: translateY(-50%);
+    }
+
+    .top .contact-links.header-contact-links a{
+        min-height: 48px;
+        padding: 0 14px;
+        font-size: clamp(14px, 1.1vw, 18px);
+    }
+}
+
+/*navタブレット */
+@media (min-width: 1100px){
+    
+
+    .top,.live{
+        color:#333333;
+        font-size: 20px;
+        position: static;
+    z-index: 10;
+    
+    }
+    .top .fhone{
+        position: relative;  /* ←追加：これでz-indexが効く */
+    z-index: 10;
+        font-size: 30px;
+        font-weight: bold;
+
+    }
+    .top .fhone a{
+        color: #F8B62D;
+    }
+    .live, .fhone{
+        left: 3%;
+    }
+
+}
+/*navスマホ*/
+@media (max-width: 1100px){
+
+    .top,.live{
+    color:#333333;
+    font-size: 8px;
+     position: relative;  /* ←追加：これでz-indexが効く */
+  z-index: 10;
+   
+    }
+    .top .fhone{
+        margin-right: 5px;
+        position: relative;  /* ←追加：これでz-indexが効く */
+    z-index: 10;
+        font-size: 16px;
+        font-weight: bold;
+
+    }
+    .live, .fhone{
+        left: 2%;
+    }
+    .top .fhone a{
+        color: #F8B62D;
+    }
+}
+header,.top{
+    background-color: #ffffff;
+}
+header .top{
+    position: static;
+}
+main{
+    margin: 5% 0% 5% 0%;
+}
+.concept {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 56px);
+    box-sizing: border-box;
+    width: min(92%, 1100px);
+    margin: 10% 0 5% auto;
+    padding: clamp(28px, 5vw, 64px);
+    background-color: #F1E8DC;
+    border-radius: clamp(48px, 12vw, 160px) 0 0 clamp(24px, 4vw, 48px);
+}
+.concept::after {
+    content: "Concept";
+    position: absolute;
+    right: 0.05em;
+    bottom: -0.1em;
+    color: rgba(255, 255, 255, 0.45);
+    font-family: Georgia, serif;
+    font-size: clamp(5rem, 17vw, 13rem);
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+}
+.concept > * {
+    position: relative;
+    z-index: 1;
+}
+.concept-copy {
+    min-width: 0;
+}
+.concept p{
+    color: #333333;
+    margin-top: 0%;
+}
+.concept h1{
+    display: block;
+    width: 100%;
+    margin: 0 0 16px;
+    color: #B98A54;
+    font-family: Georgia, serif;
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+}
+.concept h2{
+    font-weight: bold;
+    color: #40382D;
+    margin-bottom: 0%;
+}
+@media (max-width: 760px) {
+    .concept {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+main{
+    background-color: #F5EDB9;
+}
+
+.shinryo h1{
+    font-size: 2rem;
+    color: #A95348;
+    margin: 5%;
+}
+main, footer{
+    z-index: 10;
+    position: relative;
+}
+
+/*診療１*/
+.shinryo{
+    margin-top: 0%;
+}
+.shinryo .shinryoannai .treat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 130px;
+    aspect-ratio: 1;
+    padding: 14px;
+    border: 3px solid #DCC5A4;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 4px rgba(18, 16, 16, 0.2);
+    color: #40382D;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+.shinryo .shinryoannai .treat:hover{
+    transform: translateY(-3px);
+    background-color: #F1E8DC;
+    box-shadow: 0 6px 8px rgba(18, 16, 16, 0.2);
+}
+.shinryo .shinryoannai .treat:focus-visible{
+    outline: 3px solid #A95348;
+    outline-offset: 3px;
+}
+.shinryo .shinryoannai{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px 5%;
+    justify-items: center;
+}
+.shinryo .shinryoannai .treat-category{
+    grid-column: 1 / -1;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border-left: 5px solid #A95348;
+    color: #40382D;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    text-align: left;
+}
+.shinryo .shinryoannai .treat-category:first-child{
+    margin-top: 0;
+}
+.shinryo .treat-guide-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 48px;
+}
+.shinryo .treat-guide{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 56px;
+    padding: 0 36px;
+    border-radius: 999px;
+    background-color: #A95348;
+    box-shadow: 0 4px 0 rgba(64, 56, 45, 0.2);
+    color: #FFFFFF;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+.shinryo .treat-guide::after{
+    content: "→";
+}
+.shinryo .treat-guide:hover{
+    transform: translateY(-3px);
+    background-color: #A97E56;
+    box-shadow: 0 7px 0 rgba(64, 56, 45, 0.2);
+}
+.shinryo .treat-guide:focus-visible{
+    outline: 3px solid #40382D;
+    outline-offset: 4px;
+}
+.shinryo h2{
+    margin: 5%;
+    color: #333333;
+}
+
+/*instagram*/
+.instagram1 h1{
+    text-align: center;
+    color:#B79C82;
+   font-size: 55px;
+    margin: 5%;
+}
+.instagram1 .insta-text{
+    text-align: center;
+    margin: 5%;
+}
+.instagram1 .carousel{
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+.instagram-introduce{
+   margin-left: 3%;
+   display: flex;
+}
+.instagram-introduce img {
+     width: 300px;
+    height: 350px;
+    margin-right: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);/*影*/
+}
+
+
+.instagram2{
+    text-align: center;
+    margin-top: 5%;
+}
+.instagram2 a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 0 32px;
+    border: 1px solid #B79C82;
+    border-radius: 999px;
+    background-color: #B79C82;
+    box-shadow: 0 4px 0 rgba(64, 56, 45, 0.2);
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+.instagram2 a::after{
+    content: "→";
+}
+.instagram2 a:hover{
+    transform: translateY(-3px);
+    border-color: #A87945;
+    background-color: #A87945;
+    box-shadow: 0 7px 0 rgba(64, 56, 45, 0.2);
+}
+.instagram2 a:focus-visible{
+    outline: 3px solid #40382D;
+    outline-offset: 4px;
+}
+
+
