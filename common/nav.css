@@ -39,6 +39,9 @@
         font-weight: bold;
 
     }
+    nav .inner ul li a:hover{
+    color: #DDC694;
+}
     .toggle-btn{
         display: none;
     }
@@ -84,7 +87,7 @@ nav .inner ul li a{
     transition-duration: 0.4s;
 }
 nav .inner ul li a:hover{
-    background-color: #D5D6D1;
+    color: #fff;
 }
 .toggle-btn{
     display: block;
@@ -111,6 +114,10 @@ nav .inner ul li a:hover{
     border: 2px solid #DDC694;
     box-shadow: 0 4px 12px rgba(51, 51, 51, 0.18);
     z-index: 110;
+    transition: background-color 180ms ease;
+}
+.Circle:hover{
+    background-color: #F2EEE8;
 }
 .open .toggle-btn{
     z-index: 110;
