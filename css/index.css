@@ -12,12 +12,6 @@ html, body {
   overflow-x: hidden;
 }
 
-.top{
-   margin-bottom: 0%;
-   position: static;
-   z-index: 10;
-}
-
 header{
     position: relative;
     min-height: 100%;
@@ -157,7 +151,6 @@ header{
 
 @media (max-width: 760px) {
     .interior-gallery {
-        width: 100%;
         margin: 40px 0 64px;
     }
 
@@ -213,17 +206,8 @@ header{
     text-decoration: none;
     }
     }
-.logo{
-    margin-top: 0%;
-}
-header .top{
-    margin-top: 0%;
-    margin-bottom: 0%;
-}
-
 .top .contact-links{
     justify-content: flex-start;
-    margin: 12px 0 0 3%;
 }
 
 @media (max-width: 1100px){
@@ -281,9 +265,6 @@ header .top{
         font-weight: bold;
 
     }
-    .top .fhone a{
-        color: #F8B62D;
-    }
     .live, .fhone{
         left: 3%;
     }
@@ -310,9 +291,6 @@ header .top{
     .live, .fhone{
         left: 2%;
     }
-    .top .fhone a{
-        color: #F8B62D;
-    }
 }
 header,.top{
     background-color: #ffffff;
@@ -321,7 +299,7 @@ header .top{
     position: static;
 }
 main{
-    margin: 5% 0% 5% 0%;
+    margin: 5% 0 0;
 }
 .concept {
     position: relative;
@@ -381,7 +359,7 @@ main{
     }
 }
 main{
-    background-color: #F7E5B4;
+    background-color: #F1F1F1;
 }
 
 .shinryo h1{
@@ -389,63 +367,122 @@ main{
     color: #A95348;
     margin: 5%;
 }
+.shinryo p{
+    color: #A95348;
+    margin-left: 5%;
+}
 main, footer{
     z-index: 10;
     position: relative;
 }
 
 /*診療１*/
-.shinryo{
-    margin-top: 0%;
-}
 .shinryo .shinryoannai .treat{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 8px;
     box-sizing: border-box;
-    width: 130px;
-    aspect-ratio: 1;
-    padding: 14px;
-    border: 3px solid #DCC5A4;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0 3px 4px rgba(18, 16, 16, 0.2);
-    color: #40382D;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center;
+    min-width: 0;
+    min-height: 50px;
+    padding: 20px 17px;
+    margin:5px;
+    border-radius: 9px;
+    background-color: #FFF3DB;
+    color: #3C3C3C;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4;
     text-decoration: none;
     transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
+.shinryo .shinryoannai .treat::after{
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #18394A;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #18394A;
+    content: "›";
+    font-size: 0.8rem;
+    line-height: 1;
+}
 .shinryo .shinryoannai .treat:hover{
-    transform: translateY(-3px);
-    background-color: #F1E8DC;
-    box-shadow: 0 6px 8px rgba(18, 16, 16, 0.2);
+    transform: translateY(-1px);
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(64, 56, 45, 0.08);
 }
 .shinryo .shinryoannai .treat:focus-visible{
-    outline: 3px solid #A95348;
+    outline: 10px solid #A95348;
     outline-offset: 3px;
 }
 .shinryo .shinryoannai{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 8px 5%;
-    justify-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 8px;
+    width: min(calc(100% - 24px), 1120px);
+    margin: 0 auto;
 }
-.shinryo .shinryoannai .treat-category{
-    grid-column: 1 / -1;
+.shinryo .treat-panel{
     box-sizing: border-box;
-    width: 100%;
-    margin-top: 20px;
-    padding: 8px 12px;
-    border-left: 5px solid #A95348;
-    color: #40382D;
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    font-weight: bold;
-    text-align: left;
+    min-width: 0;
+    padding: clamp(12px, 1.8vw, 18px);
+    border-radius: 12px;
 }
-.shinryo .shinryoannai .treat-category:first-child{
-    margin-top: 0;
+.shinryo .treat-panel--trouble{
+    grid-row: span 2;
+    background-color: #fff;
+    border: 2px solid #006450;
+    color: #006450;
+}
+.shinryo .treat-panel--care{
+    background-color: #fff;
+    border: 2px solid #006450;
+    color: #006450;
+}
+.shinryo .treat-panel--special{
+    background-color: #fff;
+    border: 2px solid #006450;
+    color: #006450;
+}
+.shinryo .treat-panel-heading{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(64, 56, 45, 0.16);
+}
+.shinryo .treat-panel-heading h2{
+    margin: 0;
+    color: inherit;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.shinryo .treat-panel-number{
+    font-variant-numeric: tabular-nums;
+}
+.shinryo .treat-panel-heading p{
+    margin: 6px 0 0;
+    color: inherit;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.78;
+}
+.shinryo .treat-list{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+}
+.shinryo .treat-list--trouble{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .shinryo .treat-guide-wrap{
     display: flex;
@@ -484,6 +521,14 @@ main, footer{
     margin: 5%;
     color: #333333;
 }
+@media (max-width: 640px){
+    .shinryo .shinryoannai{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .shinryo .treat-panel--trouble{
+        grid-row: auto;
+    }
+}
 
 /*instagram*/
 .instagram1 h1{
@@ -493,7 +538,6 @@ main, footer{
     margin: 5%;
 }
 .instagram1 .insta-text{
-    text-align: center;
     margin: 5%;
 }
 .instagram1 .carousel{
