@@ -37,19 +37,40 @@
    
    
     <div class="logo">
-      <div class="logo-img">
-        <!--<ul class="slideshow-fade">
-          <li><img src="../images/afloimagemart_143249625.jpg" alt="image"></li>
-          <li><img src="../images/afloimagemart_273058823.jpg" alt="image"></li>
-          <li><img src="../images/afloimagemart_198321393.jpg" alt="image"></li>
-        </ul>-->
-      </div>
     </div>
   </div>
     <div class="catchcopy">
-      未来の笑顔のために、今できることを<br><br>
-      初めての歯医者さんから<br>将来のかかりつけ医へ<br><br>
-      話す、食べる、笑うを支える歯科医院
+      <div class="catchcopy-image">
+        <img src="../images/明るく清潔な歯科診療室.png" alt="歯科診療室">
+      </div>
+      <div class="catchcopy-text">
+        未来の笑顔のために、今できることを<br><br>
+        初めての歯医者さんから<br>将来のかかりつけ医へ<br><br>
+        話す、食べる、笑うを支える歯科医院
+      </div>
+    </div>
+    <div class="interior-gallery" aria-label="院内ギャラリー">
+      <div class="interior-track">
+        <figure class="interior-photo interior-photo-left">
+          <img src="../images/北欧風のマティスアート廊下.png" alt="北欧風のマティスアート廊下">
+        </figure>
+        <figure class="interior-photo interior-photo-right">
+          <img src="../images/北欧風インテリアの水槽コーナー.png" alt="北欧風インテリアの水槽コーナー">
+        </figure>
+        <figure class="interior-photo interior-photo-left">
+          <img src="../images/パリの壁画が彩る明るいキッズスペース.png" alt="パリの壁画が彩る明るいキッズスペース">
+        </figure>
+
+        <figure class="interior-photo interior-photo-left" aria-hidden="true">
+          <img src="../images/北欧風のマティスアート廊下.png" alt="">
+        </figure>
+        <figure class="interior-photo interior-photo-right" aria-hidden="true">
+          <img src="../images/北欧風インテリアの水槽コーナー.png" alt="">
+        </figure>
+        <figure class="interior-photo interior-photo-left" aria-hidden="true">
+          <img src="../images/パリの壁画が彩る明るいキッズスペース.png" alt="">
+        </figure>
+      </div>
     </div>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="../javascript/top-image.js"></script>
@@ -218,8 +239,8 @@
       ScrollReveal({ reset: false , distance:"500px" ,duration:2000,delay:300});
       ScrollReveal().reveal('.img1', { delay: 300,origin:"left" });
       ScrollReveal().reveal('.img2', { delay: 300,origin:"right" });
-      ScrollReveal().reveal('.catchcopy', { delay: 800,origin:"left" });
-      ScrollReveal().reveal('.image', { delay: 3800, origin: "bottom", distance: "60px" });
+      ScrollReveal().reveal('.interior-gallery', { delay: 300, origin: "bottom", distance: "60px" });
+      ScrollReveal().reveal('.image', { delay: 500, origin: "bottom", distance: "60px" });
       ScrollReveal().reveal('.concept', { delay: 300,origin:"bottom" });
       ScrollReveal().reveal('.concept h2', { delay: 500,origin:"right" });
       ScrollReveal().reveal('.shinryo h1,.notice h1', { delay: 200, origin: "bottom" });
